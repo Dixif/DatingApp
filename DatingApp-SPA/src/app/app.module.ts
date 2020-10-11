@@ -9,8 +9,10 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './_services/Auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
+  // tslint:disable-next-line:no-trailing-whitespace
   declarations: [		
     AppComponent,
       ValueComponent,
@@ -26,7 +28,8 @@ import { RegisterComponent } from './register/register.component';
 
   ],
   providers: [
-    AuthService
+    AuthService,
+    ErrorInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })
