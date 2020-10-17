@@ -80,11 +80,11 @@ namespace DatingApp.API
                 
                 });
             }
-            app.UseAuthentication();
+         
             app.UseRouting();
           
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyMethod().AllowAnyHeader());
-
+   app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
