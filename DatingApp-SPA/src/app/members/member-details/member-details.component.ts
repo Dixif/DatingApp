@@ -50,6 +50,7 @@ galleryImages: NgxGalleryImage[];
   this.galleryImages = this.getImages();
   }
   getImages(){
+    console.log("erre");
     const imageUrls = [];
     for (let i = 0; i < this.user.photos.length; i++) {
       imageUrls.push({
